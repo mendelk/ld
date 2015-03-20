@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>AJM</title>
+</head>
+<body>
+
+  <p>Hello World</p>
+
+  <div component data-data="users" data-template="user-template"></div>
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/lodash/lodash.min.js"></script>
+  <script src="/assets/scripts/main.js"></script>
+
+  <script type="text/template" id="user-template">
+    <ul class="component-<%- name %>">
+      <% _.each(users, function(user) { %>
+        <li><%- user.name %> (<%- user.age %>)</li>
+      <% }); %>
+    </ul>
+  </script>
+
+</body>
